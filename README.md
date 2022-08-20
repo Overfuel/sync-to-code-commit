@@ -29,13 +29,13 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.TEST_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.TEST_AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
 
       - name: Sync up to CodeCommit
-        uses: youyo/sync-up-to-codecommit-action@v1
+        uses: Overfuel/sync-to-code-commit
         with:
           repository_name: test_repo
-          aws_region: us-east-1
+          aws_region: us-east-2
 ```
 
 ## Inputs
